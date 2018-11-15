@@ -1,0 +1,797 @@
+$imgbg_width:100%;
+$imgbg_height:100%;
+$font_color:rgb(44,180,119);
+$css_times:all 1s;
+$css_times_delay:0.7s !default;
+$css_times_o:0;
+$css_times_i:1;
+$css_scale:scale(0.5,0.5);
+$css_scale1:scale(1,1);
+/*
+ *Css3-Sass
+ */
+@mixin animation_start_WH{
+    opacity: $css_times_o;
+    transition: $css_times;
+    -webkit-transform: $css_scale;
+    transform: $css_scale;
+}
+@mixin animation_end_WH{
+    opacity: $css_times_i;
+    transition-delay: $css_times_delay;
+    -webkit-transform: $css_scale1;
+    transform: $css_scale1;
+}
+
+@mixin animation_start_position{
+    opacity: $css_times_o;
+    transition: $css_times;
+}
+@mixin animation_end_position{
+    opacity: $css_times_i;
+    transition-delay: $css_times_delay;
+}
+
+
+*{
+    margin: $css_times_o;
+    padding: $css_times_o;
+}
+.section{
+    position: relative;
+    overflow: hidden;
+}
+.bg{
+    width: $imgbg_width;
+    height: $imgbg_height;
+    position: absolute;
+    top: $css_times_o;
+    left: $css_times_o;
+}
+.bg img{
+    display: block;
+    width: $imgbg_width;
+    height: $imgbg_height;
+}
+.first_text{
+    position: absolute;
+    top: 98px;
+    left: 50%;
+    margin-left: -202px;
+    display: flex;
+    font-size: 50px;
+    color: $font_color;
+    line-height: 50px;
+    font-weight:bold ;
+    @include animation_start_WH;
+}
+.first_text img{
+    width: 51px;
+    height: 51px;
+}
+.first_text p{
+    margin: 0;
+    margin-left: 30px;
+}
+.first_img{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    margin-left: -318px;
+    @include animation_start_position;
+}
+.first_img img{
+    width: 637px;
+    height: 590px;
+}
+.first_textimg{
+    position: absolute;
+    bottom: -100%;
+    left:50%;
+    margin-left: -333px;
+    display:flex;
+    @include animation_start_position;
+}
+.first_textimg_p{
+    margin-top: 55px;
+    margin-right: 116px;
+}
+.first_textimg_p p:nth-child(1){
+    font-size: 20px;
+    color: rgb(95,67,67);
+}
+.first_textimg_p p:nth-child(2){
+    font-size: 40px;
+    color: rgb(199,54,57);
+}
+.QR_p{
+    font-size: 15px;
+    color: rgb(152,152,152);
+}
+.first_textimg .QR_p img{
+    width:114px;
+    height: 114px;
+    display: block;
+}
+.text_red{
+    width: 653px;
+    height: 79px;
+    background: rgb(199,54,57);
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+    margin-left: -326px;
+    text-align: center;
+    font-size: 29px;
+    line-height: 71px;
+    color: #FFFFFF;
+    font-weight: bold;
+    @include animation_start_position;
+}
+
+.Second_text{
+    position: absolute;
+    top: 100px;
+    left: -100%;
+    margin-left: -157px;
+    font-size: 45px;
+    color: rgb(231,58,74);
+    font-weight: bold;
+    text-align: center;
+    @include animation_start_position;
+}
+.Second_text p:nth-child(2){
+    font-size: 25px;
+}
+.Second_img{
+    position: absolute;
+    top: 295px;
+    right: -100%;
+    margin-right: -370px;
+    @include animation_start_position;
+}
+.Second_img img{
+    width: 680px;
+    height: 821px;
+}
+.AI_text{
+    position: absolute;
+    bottom: 199px;
+    left: -100%;
+    margin-left: -75px;
+    font-size: 30px;
+    color: #FFFFFF;
+    font-weight: bold;
+    @include animation_start_position;
+}
+.phone_text{
+    width: 653px;
+    height: 79px;
+    background: rgb(199,54,57);
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 74px;
+    left: -100%;
+    margin-left: -326px;
+    line-height: 70px;
+    @include animation_start_position;
+}
+
+.Third_text{
+    position: absolute;
+    top: 97px;
+    left: 50%;
+    text-align: center;
+    font-size: 45px;
+    color: rgb(35,159,255);
+    font-weight: bold;
+    margin-left: -315px;
+    @include animation_start_WH;
+}
+.Third_text p:nth-child(2){
+    line-height: 40px;
+    font-size: 25px;
+}
+.Third_phone1{
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    margin-left: -240px;
+    @include animation_start_WH;
+}
+.Third_phone1 img{
+    width: 479px;
+    height: 394px;
+}
+.Third_bg1_bz{
+    width: 112px;
+    height: 176px;
+    background: url(../img/Third_phone1_bz.png) no-repeat;
+    position: absolute;
+    top: 314px;
+    left: -100%;
+    @include animation_start_position;
+}
+.Third_bg1_as{
+    width: 59px;
+    height: 104px;
+    background: url(../img/Third_phone1_as.png) no-repeat;
+    position: absolute;
+    top: 605px;
+    left: -100%;
+    @include animation_start_position;
+}
+.Third_bg1_jr{
+    width: 149px;
+    height: 171px;
+    background: url(../img/Third_phone1_jr.png) no-repeat;
+    position: absolute;
+    top: 539px;
+    right: -100%;
+    @include animation_start_position;
+}
+.Third_phone2{
+    position: absolute;
+    bottom: 136px;
+    left: 50%;
+    margin-left: -301px;
+    @include animation_start_WH;
+}
+.Third_phone2 img{
+    width: 602px;
+    height: 422px;
+}
+.Third_bg2_sc{
+    width: 131px;
+    height: 210px;
+    background: url(../img/Third_phone2_sc.png) no-repeat;
+    position: absolute;
+    left: -100%;
+    bottom: 300px;
+    @include animation_start_position;
+}
+.Third_bg2_gx{
+    width: 53px;
+    height: 79px;
+    background: url(../img/Third_phone2_gx.png) no-repeat;
+    position: absolute;
+    bottom: 109px;
+    right: -100%;
+    @include animation_start_position;
+}
+.Third_bg2_fw{
+    width: 53px;
+    height: 92px;
+    background: url(../img/Third_phone2_fw.png) no-repeat;
+    position: absolute;
+    bottom: 109px;
+    right: -100%;
+    @include animation_start_position;
+}
+.Third_bg2_as{
+    width: 58px;
+    height: 104px;
+    background: url(../img/Third_phone2_as.png) no-repeat;
+    position: absolute;
+    bottom: 109px;
+    right: -100%;
+    @include animation_start_position;
+}
+
+.Fourth_text{
+    font-size: 45px;
+    color: rgb(255,85,0);
+    font-weight: bold;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -315px;
+    text-align: center;
+    @include animation_start_WH;
+}
+.Fourth_text p:nth-child(2){
+    font-size: 25px;
+    line-height: 50px;
+}
+.Fourth_phone1{
+    position: absolute;
+    top: 263px;
+    left: 50%;
+    margin-left: -232px;
+    @include animation_start_WH;
+}
+.Fourth_phone1 img{
+    width: 462px;
+    height: 455px;
+}
+.Fourth_zg1{
+    width: 112px;
+    height: 176px;
+    background: url(../img/Fourth_zg1.png) no-repeat;
+    position: absolute;
+    top: 314px;
+    left: -100%;
+    @include animation_start_position;
+}
+.Fourth_fb1{
+    width: 59px;
+    height: 87px;
+    background: url(../img/Fourth_fb1.png) no-repeat;
+    position: absolute;
+    top: 600px;
+    left: -100%;
+    @include animation_start_position;
+}
+.Fourth_mb1{
+    width: 172px;
+    height: 113px;
+    background: url(../img/Fourth_mb1.png) no-repeat;
+    position: absolute;
+    top: 282px;
+    right: -100%;
+    @include animation_start_position;
+}
+.Fourth_phone2{
+    position: absolute;
+    bottom: 59px;
+    left: 50%;
+    margin-left: -274px;
+    @include animation_start_WH;
+}
+.Fourth_phone2 img{
+    width: 548px;
+    height: 499px;
+}
+.Fourth_hx2{
+    width: 131px;
+    height: 164px;
+    background: url(../img/Fourth_hx2.png) no-repeat;
+    position: absolute;
+    bottom: 345px;
+    left: -100%;
+    @include animation_start_position;
+}
+.Fourth_zp2{
+    width: 105px;
+    height: 59px;
+    background: url(../img/Fourth_zp2.png) no-repeat;
+    position: absolute;
+    bottom: 445px;
+    right: -100%;
+    @include animation_start_position;
+}
+.Fourth_sp2{
+    width: 82px;
+    height: 60px;
+    background: url(../img/Fourth_sp2.png) no-repeat;
+    position: absolute;
+    bottom: 345px;
+    right: -100%;
+    @include animation_start_position;
+}
+.Fourth_fk2{
+    width: 77px;
+    height: 96px;
+    background: url(../img/Fourth_fk2.png) no-repeat;
+    position: absolute;
+    bottom: 175px;
+    right: -100%;
+    @include animation_start_position;
+}
+
+.Fifth_text{
+    font-size: 45px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 97px;
+    left: 50%;
+    margin-left: -293px;
+    @include animation_start_WH;
+}
+.Fifth_text p:nth-child(2){
+    font-size: 25px;
+    line-height: 50px;
+}
+.Fifth_key{
+    position: absolute;
+    top: 363px;
+    left: -100%;
+    @include animation_start_position;
+}
+.Fifth_key img{
+    width: 225px;
+    height: 356px;
+}
+.Fifth_mm{
+    width: 164px;
+    height: 22px;
+    background: url(../img/Fifth_mm.png) no-repeat;
+    position: absolute;
+    top: 376px;
+    left: -100%;
+    @include animation_start_position;
+}
+.Fifth_km{
+    width: 148px;
+    height: 22px;
+    background: url(../img/Fifth_km.png) no-repeat;
+    position: absolute;
+    top: 438px;
+    left: -100%;
+    @include animation_start_position;
+}
+.Fifth_aq{
+    width: 190px;
+    height: 23px;
+    background: url(../img/Fifth_aq.png) no-repeat;
+    position: absolute;
+    top: 551px;
+    left: -100%;
+    @include animation_start_position;
+}
+.Fifth_text_1{
+    position: absolute;
+    top: 420px;
+    right: -100%;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    line-height: 50px;
+    @include animation_start_position;
+}
+.Fifth_text_1 p:nth-child(1){
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.Fifth_machine{
+    position: absolute;
+    bottom: 276px;
+    right: -100%;
+    @include animation_start_position;
+}
+.Fifth_machine img{
+    width: 148px;
+    height: 377px;
+}
+.Fifth_sp{
+    width: 147px;
+    height: 23px;
+    background: url(../img/Fifth_sp.png) no-repeat;
+    position: absolute;
+    bottom: 455px;
+    right: -100%;
+    @include animation_start_position;
+}
+.Fifth_qh{
+    width: 147px;
+    height: 23px;
+    background: url(../img/Fifth_qh.png) no-repeat;
+    position: absolute;
+    bottom: 332px;
+    right: -100%;
+    @include animation_start_position;
+}
+.Fifth_text_2{
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    position: absolute;
+    bottom: 299px;
+    left: -100%;
+    text-align: center;
+    line-height: 50px;
+    @include animation_start_position;
+}
+.Fifth_text_2 p:nth-child(1){
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.Sixth_text{
+    position: absolute;
+    top: 97px;
+    left: 50%;
+    margin-left: -225px;
+    font-size: 45px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    @include animation_start_WH;
+}
+.Sixth_text p:nth-child(2){
+    font-size: 25px;
+    line-height: 50px;
+}
+.Sixth_phone{
+    position: absolute;
+    top: 515px;
+    left: 50%;
+    margin-left: -225px;
+    @include animation_start_WH;
+}
+.Sixth_phone img{
+    width: 449px;
+    height: 270px;
+}
+.Sixth_gj1{
+    width: 82px;
+    height: 196px;
+    background: url(../img/Sixth_gj1.png) no-repeat;
+    position: absolute;
+    top: 325px;
+    left: -100%;
+    @include animation_start_position;
+}
+.Sixth_lx1{
+    width: 82px;
+    height: 115px;
+    background: url(../img/Sixth_lx1.png) no-repeat;
+    position: absolute;
+    top: 445px;
+    right: -100%;
+    @include animation_start_position;
+}
+.Sixth_wx1{
+    width: 82px;
+    height: 115px;
+    background: url(../img/Sixth_wx1.png) no-repeat;
+    position: absolute;
+    top: 740px;
+    left: -100%;
+    @include animation_start_position;
+}
+.Sixth_img_text_position{
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+    margin-left: -326px;
+    @include animation_start_position;
+}
+.Sixth_img_text{
+    float: left;
+}
+.Sixth_img_text img{
+   width: 45px;
+   height: 46px;
+}
+.Sixth_img_text div{
+    display: inline-block;
+    line-height: 30px;
+    margin-right: 83px;
+}
+.Sixth_img_text p{
+    font-size: 17px;
+    color: #000000;
+    font-weight: bold;
+}
+.Sixth_img_text p:nth-child(2){
+    font-size: 11px;
+}
+
+.Seventh_text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -73px 0 0 -160px;
+    @include animation_start_WH;
+}
+.Seventh_text p{
+    font-size: 80px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
+.Seventh_text p:nth-child(2){
+    font-size: 30px;
+}
+
+#fp-nav span, .fp-slidesNav span {
+    border: 1px solid #999;
+}
+
+/*
+ *Css3动画
+ */
+.active .first_text{
+    @include animation_end_WH;
+}
+.active .first_img{
+    @include animation_end_position;
+    top: 298px;
+}
+.active .first_textimg{
+    @include animation_end_position;
+    bottom: 266px;
+}
+.active .text_red{
+    @include animation_end_position;
+    bottom: 115px;
+}
+
+.active .Second_text{
+    @include animation_end_position;
+    left: 50%;
+}
+.active .Second_img{
+    @include animation_end_position;
+    right: 50%;
+}
+.active .AI_text{
+    @include animation_end_position;
+    left: 50%;
+}
+.active .phone_text{
+    @include animation_end_position;
+    left: 50%;
+}
+.active .Third_text{
+    @include animation_end_WH;
+}
+.active .Third_phone1{
+    @include animation_end_WH;
+}
+.active .Third_bg1_bz{
+    @include animation_end_position;
+    left: 155px;
+}
+.active .Third_bg1_as{
+    @include animation_end_position;
+    $css_times_delay:0.9s;
+    transition-delay: $css_times_delay;
+    left: 180px;
+}
+.active .Third_bg1_jr{
+    @include animation_end_position;
+    right: 120px;
+}
+.active .Third_phone2{
+    @include animation_end_WH;
+}
+.active .Third_bg2_sc{
+    @include animation_end_position;
+    left: 165px;
+}
+.active .Third_bg2_gx{
+    @include animation_end_position;
+    right: 345px;
+}
+.active .Third_bg2_fw{
+    @include animation_end_position;
+    $css_times_delay:0.8s;
+    transition-delay: $css_times_delay;
+    right: 260px;
+}
+.active .Third_bg2_as{
+    @include animation_end_position;
+    $css_times_delay:0.9s;
+    transition-delay: $css_times_delay;
+    right: 175px;
+}
+
+.active .Fourth_text{
+    @include animation_end_WH;
+}
+.active .Fourth_phone1{
+    @include animation_end_WH;
+}
+.active .Fourth_zg1{
+    @include animation_end_position;
+    left: 145px;
+}
+.active .Fourth_fb1{
+    @include animation_end_position;
+    $css_times_delay:0.8s;
+    transition-delay: $css_times_delay;
+    left: 235px;
+}
+.active .Fourth_mb1{
+    @include animation_end_position;
+    right: 180px;
+}
+.active .Fourth_phone2{
+    @include animation_end_WH;
+}
+.active .Fourth_hx2{
+    @include animation_end_position;
+    left: 170px;
+}
+.active .Fourth_zp2{
+    @include animation_end_position;
+    right: 155px;
+}
+.active .Fourth_sp2{
+    @include animation_end_position;
+    $css_times_delay:0.8s;
+    transition-delay: $css_times_delay;
+    right: 155px;
+}
+.active .Fourth_fk2{
+    @include animation_end_position;
+    $css_times_delay:0.9s;
+    transition-delay: $css_times_delay;
+    right: 155px;
+}
+
+.active .Fifth_text{
+    @include animation_end_WH;
+}
+.active .Fifth_key{
+    @include animation_end_position;
+    left: 104px;
+}
+.active .Fifth_mm{
+    @include animation_end_position;
+    left: 256px;
+}
+.active .Fifth_km{
+    @include animation_end_position;
+    $css_times_delay:0.8s;
+    transition-delay: $css_times_delay;
+    left: 256px;
+}
+.active .Fifth_aq{
+    @include animation_end_position;
+    $css_times_delay:0.9s;
+    transition-delay: $css_times_delay;
+    left: 256px;
+}
+.active .Fifth_text_1{
+    @include animation_end_position;
+    right: 180px;
+}
+.active .Fifth_machine{
+    @include animation_end_position;
+    right: 77px;
+}
+.active .Fifth_sp{
+    @include animation_end_position;
+    right: 191px;
+}
+.active .Fifth_qh{
+    @include animation_end_position;
+    $css_times_delay:0.8s;
+    transition-delay: $css_times_delay;
+    right: 191px;
+}
+.active .Fifth_text_2{
+    @include animation_end_position;
+    left: 180px;
+}
+.active .Sixth_text{
+    @include animation_end_WH;
+}
+.active .Sixth_phone{
+    @include animation_end_WH;
+}
+.active .Sixth_gj1{
+    @include animation_end_position;
+    left: 425px;
+}
+.active .Sixth_lx1{
+    @include animation_end_position;
+    $css_times_delay:0.8s;
+    transition-delay: $css_times_delay;
+    right: 360px;
+}
+.active .Sixth_wx1{
+    @include animation_end_position;
+    $css_times_delay:0.9s;
+    transition-delay: $css_times_delay;
+    left: 345px;
+}
+.active .Sixth_img_text_position{
+    @include animation_end_position;
+    bottom: 200px;
+}
+.active .Seventh_text{
+    @include animation_end_WH;
+}
+/*
+ *PC
+ */
