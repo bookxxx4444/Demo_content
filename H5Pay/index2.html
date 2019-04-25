@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<meta name="description" content="不超过150个字符" />
+		<meta name="keywords" content="" />
+		<meta content="caibaojian" name="author" />
+		<title>H5拉起app支付</title>
+		<link rel="stylesheet" href="css/rem.css">
+		<link rel="stylesheet" type="text/css" href="css/index2.css"/>
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="js/rem.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="Pay">
+			<div class="IndentPay">
+				H5支付
+			</div>
+			<div class="IndentContent">
+				<ul>
+					<li>订单编号：</li>
+					<li>订单名称：</li>
+					<li>订单价格：</li>
+					<li>支付类型：</li>
+					<li>OpenId：</li>
+					<li>UserIp：</li>
+					<li>AppId：</li>
+					<li>Ip地址：</li>
+				</ul>
+				<ul>
+					<li>
+						<input class="IndentNumber" type="text"/>
+					</li>
+					<li>
+						<input class="IndentName" type="text"/>
+					</li>
+					<li>
+						<input class="IndentPrice" type="text"/>
+					</li>
+					<li>
+						<input class="IndentCode" type="text"/>
+					</li>
+					<li>
+						<input placeholder="支付宝支付可为空!" class="IndentNumber" type="text"/>
+					</li>
+					<li>
+						<input placeholder="支付宝支付可为空!" class="IndentName" type="text"/>
+					</li>
+					<li>
+						<input class="IndentPrice" type="text"/>
+					</li>
+					<li>
+						<input class="IndentCode" type="text"/>
+					</li>
+				</ul>
+			</div>
+			<!--<div class="IndentSubmit">-->
+				<button class="WeChatPay" type="submit">微信&nbsp;支付</button>
+				<!--<button class="Alipay" type="submit">支付宝&nbsp;支付</button>-->
+			<!--</div>-->
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$('.WeChatPay').click(function(){
+				$.ajax({
+					type:"post",
+					url:"www.xoado.com/xoado_pay/pay/appPayFor",
+					dataType:"json",
+					data:{
+						
+					},
+					success:function(str){
+						console.log(JSON.stringify(str))
+					},
+					error:function(str){
+						console.log(JSON.stringify(str))
+					}
+				});
+				window.location.href="weixin://wxpay/bizpayurl?pr=LoklIIt";
+			})
+		});
+	</script>
+</html>

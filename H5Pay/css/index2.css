@@ -1,0 +1,41 @@
+.Pay {
+	width: 100%;
+	padding-top: .5rem;
+	background: #f7f7f7;
+}
+
+.IndentPay {
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+	color: #806f6f;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.IndentContent {
+	padding: .4rem .2rem .2rem .2rem;
+}
+
+.IndentContent ul:nth-child(1) {
+	float: left;
+	margin: 0 .3rem;
+}
+
+.IndentContent ul:nth-child(1) li,
+.IndentContent ul:nth-child(2) li {
+	margin-top: .2rem;
+}
+
+.WeChatPay {
+	width: 5rem;
+	height: .7rem;
+	display: block;
+	margin: 0 auto;
+	margin-top: .4rem;
+	border: none;
+	outline: none;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 5px;
+	background: #f76631;
+}

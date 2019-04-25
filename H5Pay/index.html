@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<meta name="description" content="不超过150个字符" />
+		<meta name="keywords" content="" />
+		<meta content="caibaojian" name="author" />
+		<title>二维码支付</title>
+		<link rel="stylesheet" href="css/rem.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/rem.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="Qr-Code-Pay">
+			<div class="IndentPay">
+				二维码支付
+			</div>
+			<form class="FormPay" action="www.xoado.com/xoado_pay/pay/scannerpay" method="post">
+				<ul>
+					<li>订单编号：</li>
+					<li>订单名称：</li>
+					<li>订单价格：</li>
+					<li>支付类型：</li>
+					<li>OpenId：</li>
+					<li>UserIp：</li>
+					<li>AppId：</li>
+					<li>Ip地址：</li>
+				</ul>
+				<ul>
+					<li><input type="text" name="orderNo"/></li>
+					<li><input type="text" name="payTitle"/></li>
+					<li><input type="text" name="payAmount"/></li>
+					<li><input type="text" name="Type"/></li>
+					<li><input placeholder="支付宝支付可为空!" type="text" name="openId"/></li>
+					<li><input placeholder="支付宝支付可为空!" type="text" name="userIp"/></li>
+					<li><input type="text" name="appId"/></li>
+					<li><input type="text" name="userIp"/></li>
+				</ul>
+					<input class="QrPaySubmit" type="submit" value="支&nbsp付"/>
+			</form>
+		</div>
+	</body>
+</html>
